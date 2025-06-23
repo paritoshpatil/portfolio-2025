@@ -17,4 +17,4 @@
 - [x] Initial Boilerplate
 - [ ] Flesh Out Initial Design
 - [ ] Add Data from Resume
-- [ ] Make Hover Effect with Embedded MP4 / GIF
+- [x] Make Hover Effect with Embedded MP4 / GIF
