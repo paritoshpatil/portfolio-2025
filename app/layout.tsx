@@ -1,13 +1,12 @@
-import type {Metadata} from "next";
-import {Geist, Geist_Mono, Funnel_Display} from "next/font/google";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Funnel_Display } from "next/font/google";
 import "./globals.css";
-
-import {ThemeProvider as NextThemesProvider} from "next-themes"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
 
 export function ThemeProvider({
-                                  children,
-                                  ...props
-                              }: React.ComponentProps<typeof NextThemesProvider>) {
+    children,
+    ...props
+}: React.ComponentProps<typeof NextThemesProvider>) {
     return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }
 
@@ -27,24 +26,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+    children,
+}: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <body
-            className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
-        >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-        >
-            {children}
-        </ThemeProvider>
-        </body>
+            <body
+                className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
+            >
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     );
 }
