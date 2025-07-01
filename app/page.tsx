@@ -7,6 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/ui/fadein";
 import { Links } from "./links";
+import MagnetLines from "@/components/ui/MagnetLines";
 
 export default function Home() {
     const { triggerRef, tooltip } = useCursorTooltip({
@@ -27,26 +28,41 @@ export default function Home() {
     })
 
     return (
-        <main className="flex flex-col items-start justify-center min-h-screen px-4 py-12 sm:px-6 lg:px-8">
-            <FadeIn delay={0.1}>
-                <div className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:bg-accent" ref={triggerRef}>
-                    <h1 className="text-5xl">Hello, I'm Pari.</h1>
+        <main className="flex flex-row h-screen w-screen items-center p-32 sm:px-6 lg:px-8"> 
+            <div className="flex flex-col items-start justify-center h-full w-full pl-32">
+                <FadeIn delay={0.1}>
+                    <div className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:bg-accent" ref={triggerRef}>
+                        <h1 className="text-5xl">Hello, I'm Pari.</h1>
+                    </div>
+                    {tooltip}
+                </FadeIn>
+
+                <FadeIn delay={0.2} className="w-full">
+                    <Separator className="w-full" />
+                    <p className="text-md text-foreground/70 text-monospace w-full">
+                        Welcome to my portfolio. I'm a developer, musician and a bunch of other things.
+                        <br />
+                        This is a place where I showcase my work, skills & other interests.</p>
+                </FadeIn>
+
+                <div className="mt-16">
+                    <Links />
                 </div>
-                {tooltip}
-            </FadeIn>
-
-            <FadeIn delay={0.2} className="w-full">
-                <Separator className="w-1/2 max-w-1/2" />
-                <p className="text-md text-foreground/70 text-monospace max-w-1/2">
-                    Welcome to my portfolio. I'm a developer, musician and a bunch of other things.
-                    <br />
-                    This is a place where I showcase my work, skills & other interests.</p>
-            </FadeIn>
-
-            <div className="mt-16">
-                <Links />
             </div>
-
+            <div className="flex flex-row items-center justify-center w-full pr-32">  
+                <FadeIn delay={1.7} className="w-full h-full flex flex-row items-center justify-center">
+                <MagnetLines
+                    rows={10}
+                    columns={10}
+                    containerSize="50vmin"
+                    lineColor="white"
+                    lineWidth="0.2vmin"
+                    lineHeight="3vmin"
+                    baseAngle={0}
+                    style={{ margin: "2rem" }}
+                    />
+                </FadeIn>
+            </div>
             
         </main>
     );
