@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Funnel_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes"
+import Navbar from "./navbar";
 
 export function ThemeProvider({
     children,
@@ -41,6 +42,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
+                    <Navbar/>
                     {children}
                 </ThemeProvider>
             </body>
