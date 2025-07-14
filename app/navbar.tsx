@@ -9,8 +9,8 @@ export default function Navbar() {
     const router = useRouter();
 
     return(
-        <nav className="w-screen h-24 flex flex-row justify-between items-center px-32">
-            <Button variant={"outline"} onClick={() => router.back()}>
+        <nav className="w-full h-navbar flex flex-row justify-between items-center px-32">
+            <Button variant={"secondary"} size={"icon"} onClick={() => router.back()} className="cursor-pointer">
                 <ArrowLeft/>
             </Button>
         </nav>

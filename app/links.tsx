@@ -17,7 +17,7 @@ export function Links() {
         },
         {
             title: "Photography",
-            url: "/about"
+            url: "/photography"
         },
         {
             title: "Music",

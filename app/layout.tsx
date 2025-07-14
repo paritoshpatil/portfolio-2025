@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import Navbar from "./navbar";
 
-export function ThemeProvider({
+function ThemeProvider({
     children,
     ...props
 }: React.ComponentProps<typeof NextThemesProvider>) {
@@ -43,7 +43,9 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Navbar/>
+                    <main className="h-remaining flex flex-col items-center justify-center px-24">
                     {children}
+                    </main>
                 </ThemeProvider>
             </body>
         </html>

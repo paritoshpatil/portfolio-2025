@@ -10,7 +10,7 @@ import { Links } from "./links";
 import MagnetLines from "@/components/ui/MagnetLines";
 
 export default function Home() {
-    const { triggerRef, tooltip } = useCursorTooltip({
+    const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
         content: (
             <div className="rounded-full">
                 <Image
@@ -28,8 +28,8 @@ export default function Home() {
     })
 
     return (
-        <main className="flex flex-row h-full w-full items-center p-32 sm:px-6 lg:px-8"> 
-            <div className="flex flex-col items-start justify-center h-full w-full pl-32">
+        <main className="flex flex-row w-full items-center sm:px-6 lg:px-8"> 
+            <div className="flex flex-col items-start justify-center w-full">
                 <FadeIn delay={0.1}>
                     <div className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:bg-accent" ref={triggerRef}>
                         <h1 className="text-5xl">Hello, I'm Pari.</h1>
@@ -49,7 +49,7 @@ export default function Home() {
                     <Links />
                 </div>
             </div>
-            <div className="flex flex-row items-center justify-center w-full pr-32">  
+            <div className="flex flex-row items-center justify-center w-full">  
                 <FadeIn delay={1.7} className="w-full h-full flex flex-row items-center justify-center">
                 <MagnetLines
                     rows={10}

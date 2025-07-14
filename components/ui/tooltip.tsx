@@ -12,7 +12,7 @@ interface UseCursorTooltipProps {
   smartPositioning?: boolean
 }
 
-export function useCursorTooltip({
+export function useCursorTooltip<T extends HTMLElement>({
                                    offset = { x: 15, y: -10 },
                                    content,
                                    className = "",
@@ -23,7 +23,7 @@ export function useCursorTooltip({
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const triggerRef = useRef<HTMLElement>(null)
+  const triggerRef = useRef<T>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
   const timeoutRef = useRef<NodeJS.Timeout>(null)
 
