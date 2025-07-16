@@ -1,4 +1,5 @@
 import { FadeIn } from "@/components/ui/fadein"
+import { useCursorTooltip } from "@/components/ui/tooltip"
 import Link from "next/link"
 
 export function Links() {
@@ -26,6 +27,23 @@ export function Links() {
 
     ]
 
+    const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
+        content: (
+            <div className="rounded-full">
+                <video
+                    width="400"
+                    className="rounded-full width-16 overflow-hidden border-4 border-foreground/20"
+                    autoPlay muted
+                    >
+                        <source src="/yashica.mp4" type="video/mp4"/>
+                </video>       
+            </div>
+        ),
+        maxWidth: 500,
+        offset: { x: 20, y: -20 },
+        className: "rounded-full flex items-center justify-center p-0 bg-transparent border-none"
+    })
+
     return (
         <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-4 md:gap-y-0">
             {links.map((link, index) => (
@@ -45,9 +63,12 @@ export function Links() {
             ease-in-out
           ">
                     <FadeIn key={index} delay={0.5 + index * 0.2}>
-                        <Link key={index} href={link.url}>
-                            {link.title}
-                        </Link>
+                        <div ref={triggerRef}>
+                            <Link key={index} href={link.url}>
+                                {link.title}
+                            </Link>
+                            {tooltip}
+                        </div>
                     </FadeIn>
                 </div>
             ))}
