@@ -23,7 +23,7 @@ export default function Home() {
             </div>
         ),
         maxWidth: 500,
-        offset: { x: 20, y: -20 },
+        offset: { x: 20, y: -280 },
         className: "rounded-full flex items-center justify-center p-0 bg-transparent border-none"
     })
 

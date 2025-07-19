@@ -113,7 +113,7 @@ export function useCursorTooltip<T extends HTMLElement>({
       createPortal(
           <div
               ref={tooltipRef}
-              className={`fixed z-50 pointer-events-none bg-popover border rounded-md shadow-lg animate-in fade-in zoom-in-75 ${className}`}
+              className={`fixed z-50 pointer-events-none bg-background border rounded-md shadow-lg animate-in fade-in zoom-in-75 ${className}`}
               style={{
                 left: position.x,
                 top: position.y,
