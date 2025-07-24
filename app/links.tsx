@@ -6,32 +6,31 @@ import { Tooltip } from "@radix-ui/react-tooltip"
 import Rive, { Alignment, Fit, Layout, useRive } from "@rive-app/react-canvas"
 import Link from "next/link"
 import { ReactPortal, RefObject } from "react"
+import TooltipCard  from "@/components/ui/tooltip-card"
 
 export function Links() {
     const photoTooltip = useCursorTooltip<HTMLDivElement>({
         content: (
-            <div className="rounded-full">
-                <video
-                    width="300"
-                    className="rounded-full width-16 overflow-hidden border-4 border-foreground/20"
-                    autoPlay muted
-                    >
-                        <source src="/yashica.mp4" type="video/mp4"/>
-                </video>       
-            </div>
+            <TooltipCard title="Photography" description="I shoot on film, I'm better than you" footer="this is a collection of my cameras and photos">
+                <video autoPlay muted>
+                    <source src="/yashica.mp4" type="video/mp4"/>
+                </video> 
+            </TooltipCard>
         ),
         maxWidth: 300,
         offset: { x: 20, y: -280 },
-        className: "rounded-full flex items-center justify-center p-0 bg-transparent border-none"
+        className: "p-0 bg-transparent border-none"
     })
 
     const projectsTooltip = useCursorTooltip<HTMLDivElement>({
         content: (
+            <TooltipCard title="Projects" description="I code in notepad, I'm better than you" footer="this is a collection of my projects">
                 <Rive src="possession.riv" animations="Animation1" className="w-[400px] h-[100px]"/>
+            </TooltipCard>
         ),
-        maxWidth: 400,
+        maxWidth: 480,
         offset: { x: 20, y: -180 },
-        className: "bg-background rounded-xl flex items-center justify-center px-4 py-0 border-4 border-foreground/20 "
+        className: "w-1/3 p-0 bg-transparent border-none"
 
     })
     
