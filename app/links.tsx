@@ -60,6 +60,11 @@ export function Links() {
             url: "/about",
             tooltip: null
         },
+        {
+            title: "Library",
+            url: "/library",
+            tooltip: null
+        }
 
     ]
 

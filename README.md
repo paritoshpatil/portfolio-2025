@@ -38,3 +38,7 @@
     - [ ] Poster Designs
     - [ ] Music Videos?
     - [ ] Pixel Art Stuff
+- [ ] Library Page
+    - [ ] Add an Inventory of all my books
+    - [ ] Reviews for my most liked books
+    - [ ] 3Dish or Fake 3D book covers on right pane, review on left
