@@ -28,14 +28,8 @@ export default function LatestProject(props: {id?: string}) {
             <div>
                 <FadeIn delay={0.4}>
                     <div className='flex flex-row gap-4'>
-                        <Button variant="default" size="xl" className='w-1/2 cursor-pointer'>
-                            <SquareArrowUpRight className='large-icon' />
-                            <a href="https://github.com/paritoshpatil/possession-frontend" target="_blank" className="no-underline">
-                                <span className='text-lg'>View Possession on Github</span>
-                            </a>
-                        </Button>
-                        <div className="flex flex-row gap-2 justify-end items-center w-full">
-                            <Mouse className='large-icon' />
+                        <div className="flex flex-row gap-2 justify-center items-center w-full text-foreground/70">
+                            <Mouse />
                             <p>Scroll with Momentum to see more</p>
                         </div>
                     </div>
