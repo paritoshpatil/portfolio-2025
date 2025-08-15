@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Funnel_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import Navbar from "./navbar";
+import { ReactLenis } from "@/components/ui/lenis";
 
 function ThemeProvider({
     children,
@@ -33,21 +34,23 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body
-                className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
-            >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
+            {/* <ReactLenis root> */}
+                <body
+                    className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
                 >
-                    <Navbar/>
-                    <main className="h-remaining flex flex-col items-center justify-center px-24">
-                    {children}
-                    </main>
-                </ThemeProvider>
-            </body>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="system"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        <Navbar />
+                        <main className="h-remaining flex flex-col items-center justify-center px-24">
+                            {children}
+                        </main>
+                    </ThemeProvider>
+                </body>
+            {/* </ReactLenis> */}
         </html>
     );
 }

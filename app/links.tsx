@@ -90,7 +90,7 @@ export function Links() {
           ">
                     <FadeIn key={index} delay={0.5 + index * 0.2}>
                         <div ref={link.tooltip?.triggerRef}>
-                            <Link key={index} href={link.url}>
+                            <Link key={index} href={link.url} className="no-underline">
                                 {link.title}
                             </Link>
                             {link.tooltip?.tooltip}
