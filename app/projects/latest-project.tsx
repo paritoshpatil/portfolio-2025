@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fadein";
+import ScrollText from "@/components/ui/scroll-text";
 import { Separator } from "@/components/ui/separator";
 import { Mouse, SquareArrowUpRight } from "lucide-react";
 
@@ -27,11 +28,8 @@ export default function LatestProject(props: {id?: string}) {
             </div>
             <div>
                 <FadeIn delay={0.4}>
-                    <div className='flex flex-row gap-4'>
-                        <div className="flex flex-row gap-2 justify-center items-center w-full text-foreground/70">
-                            <Mouse />
-                            <p>Scroll with Momentum to see more</p>
-                        </div>
+                    <div className='flex flex-row gap-4 w-full items-center justify-center'>
+                        <ScrollText text="Scroll with momentum to see more" />
                     </div>
                 </FadeIn>
             </div>

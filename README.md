@@ -20,12 +20,12 @@
 - [x] Initial Boilerplate
 - [x] Flesh Out Initial Design
 - [x] Make Hover Effect with Embedded MP4 / GIF
-- [ ] Photography Page
+- [x] Photography Page
     - [x] Photography Page with 3D scans of Cameras
-    - [ ] Gallery for Film Photos using ReactBits Masonry
-- [ ] Projects Page
-    - [ ] Add Data from Resume
-    - [ ] Links to live projects
+    - [x] Gallery for Film Photos using ReactBits Masonry
+- [] Projects Page
+    - [x] Add Data from Resume
+    - [x] Links to live projects
 - [ ] Info Page
     - [ ] Initial text, career headline, hobbies etc
     - [ ] Links to external stuff (Music website, other projects, etc)
