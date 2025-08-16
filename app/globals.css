@@ -142,8 +142,8 @@ body {
 }
 
 a {
-  text-decoration: underline wavy;
-  @apply decoration-emerald-600;
+  text-decoration: underline dotted;
+  @apply decoration-teal-500;
 }
 
 .no-underline {

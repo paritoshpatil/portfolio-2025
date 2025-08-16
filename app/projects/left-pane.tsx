@@ -7,6 +7,8 @@ import LatestProject from './latest-project'
 import Possession from './possession'
 import NextBlog from './nextblog'
 import LeadHeart from './leadheart'
+import PRSummary from './pr-summaries'
+import Artmix from './artmix'
 
 export default function LeftPane({ onSectionChange }: { onSectionChange: (id: string) => void }) {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -42,6 +44,7 @@ export default function LeftPane({ onSectionChange }: { onSectionChange: (id: st
     snap.add(snapSize * 2)
     snap.add(snapSize * 3)
     snap.add(snapSize * 4)
+    snap.add(snapSize * 5 + 40)
 
     // Intersection Observer to detect visible section
     const observer = new IntersectionObserver(
@@ -83,6 +86,12 @@ export default function LeftPane({ onSectionChange }: { onSectionChange: (id: st
       </section>
       <section className='mb-16' id="leadheart">
         <LeadHeart id="leadheart" />
+      </section>
+      <section className='mb-16' id="prsummary">
+        <PRSummary id="prsummary" />
+      </section>
+      <section className='mb-16' id="artmix">
+        <Artmix id="artmix" />
       </section>
     </div>
   )
