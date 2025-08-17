@@ -14,19 +14,30 @@ export default function Photography() {
     const cameras: Camera[] = [
         {
             name: "Yashica MF Super 2",
-            url: "https://prod.spline.design/8p286BljMOBpaySo/scene.splinecode"
+            url: "https://prod.spline.design/8p286BljMOBpaySo/scene.splinecode",
+            info: `A rugged 38mm film camera with built-in flash, timer, and light sensor. 
+            My most reliable everyday carry, producing consistently crisp photos across all film types.`
         },
         {
             name: "Fujifilm Instax Mini 9",
-            url: "https://prod.spline.design/6AsKSy9ac4QgmjLF/scene.splinecode"
+            url: "https://prod.spline.design/6AsKSy9ac4QgmjLF/scene.splinecode",
+            info: `Classic instant camera, more about fun than precision. Perfect for parties—snap, print, 
+            and share memories on the spot.`
+
         },
         {
             name: "Kodak KB-10",
-            url: "https://prod.spline.design/qMkOeOPQcMOxP79n/scene.splinecode"
+            url: "https://prod.spline.design/qMkOeOPQcMOxP79n/scene.splinecode",
+            info: `A ₹50 flea-market find with a scratched lens that delivers uniquely hazy, vintage-looking shots. 
+            Compact, flawed, but full of character.`
+
         },
         {
             name: "Unnamed Waterproof Camera",
-            url: "https://prod.spline.design/OteYCEH8AtSBWS3G/scene.splinecode"
+            url: "https://prod.spline.design/OteYCEH8AtSBWS3G/scene.splinecode",
+            info: `A quirky waterproof flea-market pickup with a clear protective case. Rarely used underwater, 
+            but handy in damp settings; more kept for its look than performance.`
+
         }
     ]
 
@@ -215,8 +226,14 @@ export default function Photography() {
                         </FadeIn>
                     </div>
                 </div>
-                <div className='w-1/2 h-full'>
-                    <SplineLoader sceneURL={cameras[camera].url} />
+                <div className='w-1/2 h-full flex flex-col px-8 items-center justify-center'>
+                    <FadeIn delay={1.0} className="h-2/3 w-full">
+                        <SplineLoader sceneURL={cameras[camera].url} />
+                    </FadeIn>
+                    <FadeIn delay={0.8} className='h-1/3 px-8 mt-4'>
+                        <h3 className="text-xl w-full text-center mb-4">{cameras[camera].name}</h3>
+                        <p className='text-monospace text-foreground/70 text-sm text-justify '>{cameras[camera].info}</p>
+                    </FadeIn>
                 </div>
             </div>
             <div className=''>
@@ -241,4 +258,5 @@ export default function Photography() {
 export type Camera = {
     name: string
     url: string
+    info: string
 }
