@@ -13,18 +13,24 @@ const useMedia = (
   values: number[],
   defaultValue: number
 ): number => {
-  const get = () =>
-    values[queries.findIndex((q) => matchMedia(q).matches)] ?? defaultValue;
+  const get = () => {
+    if (typeof window !== "undefined" && typeof window.matchMedia !== "undefined") {
+      return values[queries.findIndex((q) => window.matchMedia(q).matches)] ?? defaultValue;
+    }
+    return defaultValue;
+  };
 
   const [value, setValue] = useState<number>(get);
 
   useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+
     const handler = () => setValue(get);
-    queries.forEach((q) => matchMedia(q).addEventListener("change", handler));
+    const mqls = queries.map((q) => window.matchMedia(q));
+
+    mqls.forEach((mql) => mql.addEventListener("change", handler));
     return () =>
-      queries.forEach((q) =>
-        matchMedia(q).removeEventListener("change", handler)
-      );
+      mqls.forEach((mql) => mql.removeEventListener("change", handler));
   }, [queries]);
 
   return value;
