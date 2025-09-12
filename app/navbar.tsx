@@ -13,7 +13,7 @@ export default function Navbar() {
             <Button variant={"secondary"} size={"icon"} onClick={() => router.back()} className="cursor-pointer">
                 <ArrowLeft/>
             </Button>
-            <div className="text-sm text-monospace p-2 bg-red-500/40 text-red-200 rounded-md">this site is under construction by @leadheartx on x.com</div>
+            {/* <div className="text-sm text-monospace p-2 bg-red-500/40 text-red-200 rounded-md">this site is under construction by @leadheartx on x.com</div> */}
             <Signature />
         </nav>
     )
