@@ -3,7 +3,7 @@
 import { useRef, useState } from "react"
 import { motion } from "motion/react"
 
-export default function Book({title, author, image, color, textColor, onClick}: BookProps) {
+export default function Book({title, author, image, color, textColor, expandDirection, wrapperRef, onClick}: BookProps) {
     const [hovered, setHovered] = useState(false)
     const baseClasses = "w-12 h-full flex flex-col items-center justify-between border border border-foreground/60 rounded-sm cursor-pointer"
     
@@ -12,6 +12,19 @@ export default function Book({title, author, image, color, textColor, onClick}: 
     const handleHoverStart = () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         setHovered(true);
+
+        const el = wrapperRef?.()
+
+        if(el) {
+            // wait for book to expand, then scroll it into view
+            setTimeout(() => {
+                el?.scrollIntoView({
+                behavior: "smooth",
+                inline: "end",
+                })
+            }, 300)
+        }
+        
     };
 
     const handleHoverEnd = () => {
@@ -58,5 +71,7 @@ export type BookProps = {
     review?: string
     color: string
     textColor: string
+    expandDirection: string
     onClick?: () => void;
+    wrapperRef?: () => HTMLDivElement | null
 }
