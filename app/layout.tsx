@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            {/* <ReactLenis root> */}
+            <ReactLenis root>
                 <body
                     className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
                 >
@@ -50,7 +50,7 @@ export default function RootLayout({
                         </main>
                     </ThemeProvider>
                 </body>
-            {/* </ReactLenis> */}
+            </ReactLenis>
         </html>
     );
 }

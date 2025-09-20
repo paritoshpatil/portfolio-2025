@@ -1,46 +1,22 @@
 "use client"
 
-import { useRef, useState } from "react"
-import { motion } from "motion/react"
+import { use, useEffect, useRef, useState } from "react"
+import { hover, motion } from "motion/react"
+import { on } from "events"
 
-export default function Book({title, author, image, color, textColor, expandDirection, wrapperRef, onClick}: BookProps) {
-    const [hovered, setHovered] = useState(false)
-    const baseClasses = "w-12 h-full flex flex-col items-center justify-between border border border-foreground/60 rounded-sm cursor-pointer"
+export default function Book({title, author, image, color, textColor, onClick, isSelected}: BookProps) {
+    const [hovered, setHovered] = useState(isSelected)
+    const baseClasses = "w-12 h-full max-h-full flex flex-col items-center justify-between border border border-foreground/60 rounded-sm cursor-pointer"
     
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    useEffect(() => {
+        setHovered(isSelected)
+    }, [isSelected])
 
-    const handleHoverStart = () => {
-        if (timeoutRef.current) clearTimeout(timeoutRef.current);
-        setHovered(true);
-
-        const el = wrapperRef?.()
-
-        if(el) {
-            // wait for book to expand, then scroll it into view
-            setTimeout(() => {
-                el?.scrollIntoView({
-                behavior: "smooth",
-                inline: "end",
-                })
-            }, 300)
-        }
-        
-    };
-
-    const handleHoverEnd = () => {
-        // delay collapse by 500ms
-        timeoutRef.current = setTimeout(() => {
-        setHovered(false);
-        }, 100);
-    };
-    
     return <motion.div 
             layout="position"
             initial={{ width: 60 }}
-            animate={{ width: hovered ? 380 : 60 }}
+            animate={{ width: hovered ? 315: 60 }}
             className={`${baseClasses} ${color} ${textColor}`}
-            onHoverStart={handleHoverStart}
-            onHoverEnd={handleHoverEnd}
             onClick={onClick}>
                 {
                     !hovered && 
@@ -56,7 +32,7 @@ export default function Book({title, author, image, color, textColor, expandDire
                      <img
                         src={image}
                         alt={`${title} cover`}
-                        className="w-full h-full rounded-sm"
+                        className="w-full h-full max-h-full rounded-sm"
                     />
                 }
             
@@ -73,5 +49,5 @@ export type BookProps = {
     textColor: string
     expandDirection: string
     onClick?: () => void;
-    wrapperRef?: () => HTMLDivElement | null
+    isSelected?: boolean
 }
