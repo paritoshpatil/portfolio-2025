@@ -64,6 +64,11 @@ export function Links() {
             title: "Library",
             url: "/library",
             tooltip: null
+        },
+        {
+            title: "EDC",
+            url: "/edc",
+            tooltip: null
         }
 
     ]
