@@ -110,9 +110,13 @@ The highlight for me was finding the song Mera Kuchh Saamaan from Ijaazat. Its m
             image: "/books/the-last-olympian.jpg",
             color: "bg-amber-700",
             textColor: "text-foreground",
-            rating: 2,
+            rating: 3,
             expandDirection: "left",
-            review: ``
+            review: `I owe a lot to this book. I first stole it from my school library in protest of the absurd “one library day a month” rule. For years it sat unread, until a trip to Surat with my cousins — where, with little else to do, I finally opened it. That trip also gave me the lifelong habit of carrying a book everywhere.
+
+The catch? It was the fifth book in the Percy Jackson series, and I hadn’t read the first four. Still, the world instantly hooked me: Greek gods fathering half-blood children, Camp Half-Blood where they train, and Percy — Poseidon’s son — caught in a war to protect Mt. Olympus from the Titan Lord Kronos. The writing was fast, atmospheric, and thrilling, even if I was a little lost.
+
+But this book’s real impact on me had nothing to do with plot. Around the same time, I was discovering music production with my friend Mohit and searching for a name. In chapter 19, Percy says, “My limbs felt like lead.” That line clicked. I’d felt that heaviness before — right before moments that could change my life. That day on the bus home, I chose to call myself LeadHeart, and I've never looked back.`
         },
 
         {
@@ -122,8 +126,12 @@ The highlight for me was finding the song Mera Kuchh Saamaan from Ijaazat. Its m
             color: "bg-amber-200",
             textColor: "text-background",
             expandDirection: "left",
-            rating: 2,
-            review: ``
+            rating: 3,
+            review: `Men Without Women is a collection of short stories by Haruki Murakami that all circle around the idea of strange, often fragile relationships. A friend recommended it to me, particularly the opening story Drive My Car. It follows an aging actor who, after losing his license, hires a young female driver. During their rides, he reflects on his late wife and her infidelities. It’s the strongest of the bunch — grounded in reality yet still carrying Murakami’s signature strangeness, with a relationship that feels like it could bloom at any moment.
+
+A few others stood out — Scheherazade, where a confined man is visited by a woman with surreal, intimate tales, and Kino, about a bar owner whose life unravels after his cat disappears and snakes appear. Yet the magic of Murakami, for me, lies in his long-form: lush world-building, characters who breathe, and the seamless stitching of reality with fantasy. Short stories don’t leave enough space for that. These tales end just before they become fully engrossing, leaving you with a haunting aftertaste but not the satisfaction of a full novel.
+
+So I’m divided. As casual, bite-sized reads, they work. As an introduction to Murakami, though, I’d point people elsewhere — or better yet, to the Drive My Car film adaptation.`
         },
 
         {
@@ -133,8 +141,12 @@ The highlight for me was finding the song Mera Kuchh Saamaan from Ijaazat. Its m
             color: "bg-teal-600",
             textColor: "text-foreground",
             expandDirection: "left",
-            rating: 3,
-            review: ``
+            rating: 4,
+            review: `I first read Mice in Men by Anirban Bose thanks to a happy accident — my sister gifted it to me, mistaking it for Steinbeck’s Of Mice and Men. I still haven’t read Steinbeck, but I’m not disappointed by the mix-up. Bose’s book is a collection of short stories set in India, and unlike Murakami’s Men Without Women, here’s a writer who thrives within the short story format. Each piece is bite-sized yet complete, with satisfying conclusions that make the form work beautifully.
+
+There’s no central theme, though doctors and medical settings appear often — unsurprising given Bose is a doctor himself. The standouts for me include The New Job, where a poor man drives his wealthy employer to daily trysts while wrestling with his conscience; Mice in Men, where saving a rat from extermination changes a civil servant’s life; and The Balloonwala, about how a doctor’s small kindness comes back to him in unexpected ways.
+
+Bose’s stories are cleanly written, with a clear premise, setup, and often a twist that feels earned. This isn’t the kind of book that demands deep reflection — and that’s the point. It’s perfect for waiting rooms, bus rides, or quiet afternoons. In fact, my copy lives in my scooter trunk as my backup book.`
         },
     ]
     const [selected, setSelected] = useState(-1);
