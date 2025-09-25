@@ -15,7 +15,7 @@ export default function Edc() {
                     </FadeIn>
                     <FadeIn delay={0.2} className="h-full">
                         <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify mb-4">
-                            things i carry around on me in 2025
+                            things I carry on and around me in 2025
                         </p>
                         <Separator className="w-full" />
                         <ReactLenis className="h-full max-h-[80%] overflow-hidden">
@@ -46,6 +46,20 @@ export default function Edc() {
                             </div>
 
                             <div className='mb-8'>
+                                <p className="mb-2">Music Gear</p>
+                                <ul className="text-monospace text-sm text-foreground/60">
+                                    <li>MSI GL65 Laptop (main personal computer)</li>
+                                    <li>Ableton Live DAW</li>
+                                    <li>Nektar MIDI Keyboard</li>
+                                    <li>Audio Technica ATH-M20X</li>
+                                    <li>Mackie CRX-3 BT Studio Speakers</li>
+                                    <li>Blue Snowball USB Mic</li>
+                                    <li>Kreo Hive Mechanical Keyboard (Brown Switches)</li>
+                                    <li>Razer Viper Mouse</li>
+                                </ul>
+                            </div>
+
+                            <div className='mb-8'>
                                 <p className="mb-2">Skincare</p>
                                 <ul className="text-monospace text-sm text-foreground/60">
                                     <li>Cetaphil Moisturizer</li>
@@ -65,31 +79,48 @@ export default function Edc() {
             <div className='w-full h-full flex flex-col px-8 items-center justify-center border-2 border-dashed border-foreground/20 rounded-2xl'>
                 <StickerPeel
                     imageSrc={"https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Cases%20and%20Covers/Images/262166_0_dpigga.png?tr=w-640"}
-                    width={400}
-                    rotate={10}
+                    width={300}
+                    rotate={0}
                     peelBackHoverPct={10}
                     peelBackActivePct={20}
-                    initialPosition={{ x: 0, y: 0 }}
+                    initialPosition={{ x: 480, y: -220 }}
                 />
 
                 <StickerPeel
-                    imageSrc={"https://images.dailyobjects.com/marche/product-images/undefined/undefined-images/Camper-Keychain-Clip-Brown-VieW.png?tr=cm-pad_resize,v-3,w-960,h-863,dpr-2"}
-                    width={300}
-                    rotate={10}
+                    imageSrc={"/edc/house keys.png"}
+                    width={250}
+                    rotate={0}
                     peelBackHoverPct={10}
                     peelBackActivePct={20}
-                    initialPosition={{ x: -520, y: -300 }}
+                    initialPosition={{ x: -440, y: -320 }}
                 />
 
                 <StickerPeel
-                    imageSrc={"https://images.dailyobjects.com/marche/product-images/undefined/undefined-images/Camper-Keychain-Clip-Black-VieW.png?tr=cm-pad_resize,v-3,w-960,h-863,dpr-2"}
-                    width={300}
-                    rotate={40}
-                    peelBackHoverPct={10}
-                    peelBackActivePct={20}
-                    initialPosition={{ x: -520, y: -140 }}
+                    imageSrc={"/edc/yellow journal.png"}
+                    width={320}
+                    rotate={0}
+                    peelBackHoverPct={3}
+                    peelBackActivePct={8}
+                    initialPosition={{ x: -80, y: 130 }}
                 />
 
+                <StickerPeel
+                    imageSrc={"/edc/black notebook.png"}
+                    width={320}
+                    rotate={0}
+                    peelBackHoverPct={5}
+                    peelBackActivePct={10}
+                    initialPosition={{ x: -400, y: 130 }}
+                />
+
+                <StickerPeel
+                    imageSrc={"/edc/card holder.png"}
+                    width={100}
+                    rotate={0}
+                    peelBackHoverPct={10}
+                    peelBackActivePct={20}
+                    initialPosition={{ x: 320, y: -220 }}
+                />
             </div>
         </div>
     )

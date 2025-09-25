@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { FadeIn } from '@/components/ui/fadein';
+import Masonry from '@/components/ui/masonry';
 import ScrollText from '@/components/ui/scroll-text';
 import { Separator } from '@/components/ui/separator';
 import SplineLoader from '@/components/ui/splineLoader';
@@ -10,7 +11,6 @@ import { ArrowLeft, ArrowRight, Camera, Images, Mouse } from 'lucide-react';
 import { lazy, Suspense, useState } from 'react';
 
 export default function Photography() {
-    const Masonry = lazy(() => import('@/components/ui/masonry'));
     const cameras: Camera[] = [
         {
             name: "Yashica MF Super 2",
@@ -181,7 +181,7 @@ export default function Photography() {
     ];
 
     return (
-        <ReactLenis className='h-full mb-16 pb-16 overflow-hidden'>
+        <ReactLenis className='h-remaining mb-16 pb-16 overflow-hidden'>
             <div className="flex flex-row items-center justify-center h-remaining sm:px-6 lg:px-8">
                 <div className='info-pane flex flex-col justify-start w-1/2 gap-8'>
                     <FadeIn delay={0}>
