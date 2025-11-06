@@ -210,6 +210,24 @@ const Masonry: React.FC<MasonryProps> = ({
       }
     });
 
+    // --- NEW: Calculate total height and apply to container ---
+     const colHeights = new Array(columns).fill(0);
+     const gap = 16;
+     const totalGaps = (columns - 1) * gap;
+     const columnWidth = (width - totalGaps) / columns;
+   
+     items.forEach((child) => {
+       const col = colHeights.indexOf(Math.min(...colHeights));
+       const height = child.height / 2;
+       colHeights[col] += height + gap;
+     });
+   
+     const totalHeight = Math.max(...colHeights);
+     containerRef.current.style.height = `${totalHeight}px`;
+   
+     // Force Lenis (or any scroll lib) to recalc height
+     window.dispatchEvent(new Event("resize"));
+     
     hasMounted.current = true;
   }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
 
