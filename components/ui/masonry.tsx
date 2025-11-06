@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, {
   useEffect,
   useLayoutEffect,
@@ -11,11 +11,17 @@ import { gsap } from "gsap";
 const useMedia = (
   queries: string[],
   values: number[],
-  defaultValue: number
+  defaultValue: number,
 ): number => {
   const get = () => {
-    if (typeof window !== "undefined" && typeof window.matchMedia !== "undefined") {
-      return values[queries.findIndex((q) => window.matchMedia(q).matches)] ?? defaultValue;
+    if (
+      typeof window !== "undefined" &&
+      typeof window.matchMedia !== "undefined"
+    ) {
+      return (
+        values[queries.findIndex((q) => window.matchMedia(q).matches)] ??
+        defaultValue
+      );
     }
     return defaultValue;
   };
@@ -61,8 +67,8 @@ const preloadImages = async (urls: string[]): Promise<void> => {
           const img = new Image();
           img.src = src;
           img.onload = img.onerror = () => resolve();
-        })
-    )
+        }),
+    ),
   );
 };
 
@@ -111,7 +117,7 @@ const Masonry: React.FC<MasonryProps> = ({
       "(min-width:400px)",
     ],
     [5, 4, 3, 2],
-    1
+    1,
   );
 
   const [containerRef, { width }] = useMeasure<HTMLDivElement>();
@@ -198,7 +204,7 @@ const Masonry: React.FC<MasonryProps> = ({
             duration: 0.8,
             ease: "power3.out",
             delay: index * stagger,
-          }
+          },
         );
       } else {
         gsap.to(selector, {
@@ -211,23 +217,25 @@ const Masonry: React.FC<MasonryProps> = ({
     });
 
     // --- NEW: Calculate total height and apply to container ---
-     const colHeights = new Array(columns).fill(0);
-     const gap = 16;
-     const totalGaps = (columns - 1) * gap;
-     const columnWidth = (width - totalGaps) / columns;
-   
-     items.forEach((child) => {
-       const col = colHeights.indexOf(Math.min(...colHeights));
-       const height = child.height / 2;
-       colHeights[col] += height + gap;
-     });
-   
-     const totalHeight = Math.max(...colHeights);
-     containerRef.current.style.height = `${totalHeight}px`;
-   
-     // Force Lenis (or any scroll lib) to recalc height
-     window.dispatchEvent(new Event("resize"));
-     
+    const colHeights = new Array(columns).fill(0);
+    const gap = 16;
+    const totalGaps = (columns - 1) * gap;
+    const columnWidth = (width - totalGaps) / columns;
+
+    items.forEach((child) => {
+      const col = colHeights.indexOf(Math.min(...colHeights));
+      const height = child.height / 2;
+      colHeights[col] += height + gap;
+    });
+
+    const totalHeight = Math.max(...colHeights);
+
+    if (containerRef.current) {
+      containerRef.current.style.height = `${totalHeight}px`;
+      // Force Lenis (or any scroll lib) to recalc height
+      window.dispatchEvent(new Event("resize"));
+    }
+
     hasMounted.current = true;
   }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
 
@@ -236,7 +244,7 @@ const Masonry: React.FC<MasonryProps> = ({
       gsap.to(`[data-key="${id}"]`, {
         scale: hoverScale,
         duration: 0.3,
-        ease: "power2.out"
+        ease: "power2.out",
       });
     }
     if (colorShiftOnHover) {
@@ -250,7 +258,7 @@ const Masonry: React.FC<MasonryProps> = ({
       gsap.to(`[data-key="${id}"]`, {
         scale: 1,
         duration: 0.3,
-        ease: "power2.out"
+        ease: "power2.out",
       });
     }
     if (colorShiftOnHover) {
