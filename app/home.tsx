@@ -72,7 +72,7 @@ export default function Home() {
             style={{ margin: "2rem" }}
           />*/}
           <UnicornScene
-            className="unicorn-scene ml-16"
+            className="unicorn-scene ml-16 "
             projectId="8wvgb2QptnF0sKD8ChgI"
             width={640}
             height={800}
