@@ -175,7 +175,99 @@ export default function Photography() {
       url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjaF0K1YzrqcKQ7J81bfVZpmwFvetxykWjMXgD",
       height: 800,
     },
+    {
+      id: "22",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj2OoT6WrlT0ZMCJe45LNvqfsb3rIY8yAxugt2",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj2OoT6WrlT0ZMCJe45LNvqfsb3rIY8yAxugt2",
+      height: 500,
+    },
+    {
+      id: "23",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjzOGiLN6AXQIejK9lrMyWPkgOBf3UxtNvzcwp",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjzOGiLN6AXQIejK9lrMyWPkgOBf3UxtNvzcwp",
+      height: 800,
+    },
+    {
+      id: "24",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjRQcXDuUi9MS61weP872VBhWGl4rLICon5TyX",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjRQcXDuUi9MS61weP872VBhWGl4rLICon5TyX",
+      height: 500,
+    },
+    {
+      id: "25",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjDWzbVvuf4ceEOIUnaDp81ljFgVrGPJtHm9Kd",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjDWzbVvuf4ceEOIUnaDp81ljFgVrGPJtHm9Kd",
+      height: 800,
+    },
+    {
+      id: "26",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjpOfWe03F4BK3xsmSPZeTn5YI0qJ9HWQ7Mj2b",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjpOfWe03F4BK3xsmSPZeTn5YI0qJ9HWQ7Mj2b",
+      height: 500,
+    },
+    {
+      id: "27",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj7oFG2rD7kXbxdlWuncq6Q8HGJyrSTzEOBihf",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj7oFG2rD7kXbxdlWuncq6Q8HGJyrSTzEOBihf",
+      height: 800,
+    },
+    {
+      id: "28",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjqvpAwryGryAjZSDEQ5lK2UivTBbofVIJ1W6z",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjqvpAwryGryAjZSDEQ5lK2UivTBbofVIJ1W6z",
+      height: 500,
+    },
+    {
+      id: "29",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjizCB3AOzcFX8CnRv2ox4N0MVjPmah9wSqJDT",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjizCB3AOzcFX8CnRv2ox4N0MVjPmah9wSqJDT",
+      height: 800,
+    },
+    {
+      id: "30",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjYknkLhdJdbrKmARSQBk8XMtul2LEPsHg4CV6",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjYknkLhdJdbrKmARSQBk8XMtul2LEPsHg4CV6",
+      height: 1000,
+    },
+    {
+      id: "31",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj7WCoUuD7kXbxdlWuncq6Q8HGJyrSTzEOBihf",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj7WCoUuD7kXbxdlWuncq6Q8HGJyrSTzEOBihf",
+      height: 500,
+    },
+    {
+      id: "32",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj9FYjikoXQb1VHOLejSsFZmh7np02u6gKEq9k",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAj9FYjikoXQb1VHOLejSsFZmh7np02u6gKEq9k",
+      height: 500,
+    },
+    {
+      id: "33",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjm281LV0cKWBugDxdrMkni4lVswNJz98pPSEL",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjm281LV0cKWBugDxdrMkni4lVswNJz98pPSEL",
+      height: 500,
+    },
+    {
+      id: "34",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjadd26AzrqcKQ7J81bfVZpmwFvetxykWjMXgD",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjadd26AzrqcKQ7J81bfVZpmwFvetxykWjMXgD",
+      height: 500,
+    },
+    {
+      id: "35",
+      img: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjy5BTiRQ2IwcbDp5VA1TmuBjdhLZGRkMlzJer",
+      url: "https://bmih92lo1u.ufs.sh/f/qHSYAmyGryAjy5BTiRQ2IwcbDp5VA1TmuBjdhLZGRkMlzJer",
+      height: 500,
+    },
   ];
+
+  function shuffleArray(array: any[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+  }
 
   useEffect(() => {
     const images = document.querySelectorAll("img");
@@ -287,7 +379,7 @@ export default function Photography() {
           }
         >
           <Masonry
-            items={photos}
+            items={shuffleArray(photos)}
             ease="power3.out"
             duration={0.0}
             stagger={0.0}

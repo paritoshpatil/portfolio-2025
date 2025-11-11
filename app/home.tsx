@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { FadeIn } from "@/components/ui/fadein";
 import { Links } from "./links";
 import MagnetLines from "@/components/ui/MagnetLines";
+import UnicornScene from "unicornstudio-react/next";
 
 export default function Home() {
   const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
@@ -58,9 +59,9 @@ export default function Home() {
       <div className="flex flex-row items-center justify-center w-full">
         <FadeIn
           delay={1.7}
-          className="w-full h-full flex flex-row items-center justify-center"
+          className="w-full h-full flex flex-row items-center justify-center rounded-lg"
         >
-          <MagnetLines
+          {/*<MagnetLines
             rows={10}
             columns={10}
             containerSize="50vmin"
@@ -69,6 +70,12 @@ export default function Home() {
             lineHeight="3vmin"
             baseAngle={0}
             style={{ margin: "2rem" }}
+          />*/}
+          <UnicornScene
+            className="unicorn-scene ml-16"
+            projectId="8wvgb2QptnF0sKD8ChgI"
+            width={640}
+            height={800}
           />
         </FadeIn>
       </div>
