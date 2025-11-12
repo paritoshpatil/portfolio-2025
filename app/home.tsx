@@ -14,19 +14,20 @@ export default function Home() {
   const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
     content: (
       <div className="rounded-full">
-        <Image
+        {/*<Image
           src={pari}
           alt="Preview"
           width={300}
           height={300}
           className="rounded-full aspect-square border-4 border-foreground/20 shadow-xl"
-        />
+        />*/}
+        <span className="text-9xl">👋</span>
       </div>
     ),
     maxWidth: 500,
-    offset: { x: 20, y: -280 },
+    offset: { x: -100, y: -100 },
     className:
-      "rounded-full flex items-center justify-center p-0 bg-transparent border-none",
+      "rounded-full flex items-center justify-center p-0 bg-transparent border-none shadow-none",
   });
 
   return (
@@ -34,7 +35,7 @@ export default function Home() {
       <div className="flex flex-col items-start justify-center w-full">
         <FadeIn delay={0.1}>
           <div
-            className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:bg-accent"
+            className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:cursor-none hover:border-solid"
             ref={triggerRef}
           >
             <h1 className="text-5xl">Hello, I'm Pari.</h1>
@@ -72,10 +73,10 @@ export default function Home() {
             style={{ margin: "2rem" }}
           />*/}
           <UnicornScene
-            className="unicorn-scene ml-16 "
+            className="unicorn-scene ml-16"
             projectId="8wvgb2QptnF0sKD8ChgI"
-            width={640}
-            height={800}
+            width={512}
+            height={640}
           />
         </FadeIn>
       </div>

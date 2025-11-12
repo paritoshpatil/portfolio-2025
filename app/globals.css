@@ -138,7 +138,7 @@ body {
 }
 
 .h-remaining {
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100vh);
 }
 
 a {
@@ -187,4 +187,10 @@ html.lenis body {
 
 .unicorn-scene canvas {
     @apply rounded-lg;
+}
+
+.wave-cursor {
+    cursor:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 18v-4h-5v-2h5v-4h2v4h5v2h-5v4h-2z"/></svg>'),
+        auto;
 }
