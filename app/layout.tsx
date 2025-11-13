@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Funnel_Display } from "next/font/google";
+import { Geist_Mono, Funnel_Display, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Navbar from "./navbar";
@@ -15,6 +15,13 @@ function ThemeProvider({
 const funnelDisplay = Funnel_Display({
   variable: "--font-funnel-display",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -36,7 +43,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <ReactLenis root>
         <body
-          className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
+          className={`${funnelDisplay.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
         >
           <ThemeProvider
             attribute="class"
@@ -44,6 +51,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Navbar />
             <main className="h-remaining flex flex-col items-center justify-center px-24">
               {children}
             </main>

@@ -9,6 +9,16 @@ import { FadeIn } from "@/components/ui/fadein";
 import { Links } from "./links";
 import MagnetLines from "@/components/ui/MagnetLines";
 import UnicornScene from "unicornstudio-react/next";
+import BubbleMenu from "@/components/ui/bubble-nav";
+import {
+  CircleFadingPlus,
+  CircleSlash2,
+  CircleSlash2Icon,
+  DotIcon,
+  LineSquiggle,
+  Signature,
+  SmileIcon,
+} from "lucide-react";
 
 export default function Home() {
   const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
@@ -38,24 +48,36 @@ export default function Home() {
             className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:cursor-none hover:border-solid"
             ref={triggerRef}
           >
-            <h1 className="text-5xl">Hello, I'm Pari.</h1>
+            <h1 className="text-4xl text-foreground/70 text-left">
+              Hello, my name is{" "}
+              <span className="italic text-foreground">Pari.</span>
+            </h1>
           </div>
           {tooltip}
         </FadeIn>
 
-        <FadeIn delay={0.2} className="w-full">
-          <Separator className="w-full" />
-          <p className="text-md text-foreground/70 text-monospace w-full">
-            Welcome to my portfolio. I'm a developer, musician and a bunch of
-            other things.
+        <FadeIn delay={0.2} className="w-full mt-8">
+          <p className="text-6xl text-foreground w-full">
+            <span className="italic">I Make Stuff on the Internet.</span>
             <br />
-            This is a place where I showcase my work, skills & other interests.
+            <span className="italic">For the Internet.</span>
           </p>
         </FadeIn>
 
-        <div className="mt-16">
-          <Links />
-        </div>
+        <FadeIn delay={0.4} className="w-full mt-32">
+          <div className="text-monospace text-lg text-muted-foreground">
+            <p className="flex flex-row items-center gap-4 mb-4">
+              <CircleFadingPlus /> The only muscle I exercise is my creative
+              muscle.
+            </p>
+            <p className="flex flex-row items-center gap-4 mb-4">
+              <CircleSlash2Icon /> No half measures.
+            </p>
+            <p className="flex flex-row items-center gap-4 mb-4">
+              <SmileIcon /> Whatever happens, happens.
+            </p>
+          </div>
+        </FadeIn>
       </div>
       <div className="flex flex-row items-center justify-center w-full">
         <FadeIn
