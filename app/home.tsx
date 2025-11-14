@@ -42,7 +42,7 @@ export default function Home() {
   });
 
   return (
-    <main className="flex flex-row w-full items-center sm:px-6 lg:px-8">
+    <main className="flex flex-row w-full items-center sm:px-6 lg:px-8 mt-16">
       <div className="flex flex-col items-start justify-center w-full">
         <FadeIn delay={0.1}>
           <div
@@ -63,7 +63,12 @@ export default function Home() {
               I Make Stuff on the Internet.
             </TextReveal>
             <br />
-            <TextReveal variant="blur" className="italic" staggerDelay={0.04}>
+            <TextReveal
+              variant="blur"
+              className="italic"
+              delay={1}
+              staggerDelay={0.04}
+            >
               For the Internet.
             </TextReveal>
           </div>
