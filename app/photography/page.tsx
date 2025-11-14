@@ -356,7 +356,7 @@ export default function Photography() {
             </FadeIn>
           </div>
         </div>
-        <div className="w-1/2 h-full flex flex-col px-8 items-center justify-center">
+        <div className="w-1/2 h-full flex flex-col px-8 items-center justify-end">
           <FadeIn delay={1.0} className="h-2/3 w-full">
             <SplineLoader sceneURL={cameras[camera].url} />
           </FadeIn>

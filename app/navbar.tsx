@@ -2,6 +2,8 @@
 
 import BubbleMenu from "@/components/ui/bubble-nav";
 import { Button } from "@/components/ui/button";
+import { FadeIn } from "@/components/ui/fadein";
+import { TextReveal } from "@/components/ui/text-reveal";
 import { ArrowLeft, Signature } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -69,21 +71,23 @@ export default function Navbar() {
     // </nav>
     //
 
-    <BubbleMenu
-      logo={
-        <Link href="/" className="text-xl text-background">
-          Pari
-        </Link>
-      }
-      items={items}
-      menuAriaLabel="Toggle navigation"
-      menuBg="#ffffff"
-      menuContentColor="#111111"
-      useFixedPosition={false}
-      animationEase="back.out(1.5)"
-      animationDuration={0.5}
-      staggerDelay={0.12}
-      className="px-24"
-    />
+    <FadeIn delay={2}>
+      <BubbleMenu
+        logo={
+          <Link href="/" className="text-xl text-background no-underline">
+            Pari
+          </Link>
+        }
+        items={items}
+        menuAriaLabel="Toggle navigation"
+        menuBg="#ffffff"
+        menuContentColor="#111111"
+        useFixedPosition={false}
+        animationEase="back.out(1.5)"
+        animationDuration={0.5}
+        staggerDelay={0.12}
+        className="px-32"
+      />
+    </FadeIn>
   );
 }

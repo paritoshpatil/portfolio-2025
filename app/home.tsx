@@ -19,6 +19,7 @@ import {
   Signature,
   SmileIcon,
 } from "lucide-react";
+import { TextReveal } from "@/components/ui/text-reveal";
 
 export default function Home() {
   const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
@@ -56,33 +57,37 @@ export default function Home() {
           {tooltip}
         </FadeIn>
 
-        <FadeIn delay={0.2} className="w-full mt-8">
-          <p className="text-6xl text-foreground w-full">
-            <span className="italic">I Make Stuff on the Internet.</span>
+        <FadeIn delay={0.4} className="w-full mt-8">
+          <div className="text-6xl text-foreground w-full">
+            <TextReveal variant="blur" className="italic" staggerDelay={0.04}>
+              I Make Stuff on the Internet.
+            </TextReveal>
             <br />
-            <span className="italic">For the Internet.</span>
-          </p>
+            <TextReveal variant="blur" className="italic" staggerDelay={0.04}>
+              For the Internet.
+            </TextReveal>
+          </div>
         </FadeIn>
 
-        <FadeIn delay={0.4} className="w-full mt-32">
-          <div className="text-monospace text-lg text-muted-foreground">
-            <p className="flex flex-row items-center gap-4 mb-4">
-              <CircleFadingPlus /> The only muscle I exercise is my creative
-              muscle.
+        <FadeIn delay={1.4} className="w-full mt-32">
+          <div className="text-lg text-muted-foreground">
+            <p className="text-4xl text-foreground mb-4">Virtues</p>
+            <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
+              <CircleFadingPlus /> FIND CREATIVE SOLUTIONS
             </p>
-            <p className="flex flex-row items-center gap-4 mb-4">
-              <CircleSlash2Icon /> No half measures.
+            <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
+              <CircleSlash2Icon /> NO HALF MEASURES
             </p>
-            <p className="flex flex-row items-center gap-4 mb-4">
-              <SmileIcon /> Whatever happens, happens.
+            <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
+              <SmileIcon /> WHATEVER HAPPENS, HAPPENS
             </p>
           </div>
         </FadeIn>
       </div>
       <div className="flex flex-row items-center justify-center w-full">
         <FadeIn
-          delay={1.7}
-          className="w-full h-full flex flex-row items-center justify-center rounded-lg"
+          delay={1.8}
+          className="w-full h-full flex flex-row items-center justify-end rounded-lg"
         >
           {/*<MagnetLines
             rows={10}

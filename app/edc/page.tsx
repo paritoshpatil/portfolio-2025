@@ -20,9 +20,10 @@ export default function Edc() {
             <Separator className="w-full" />
             <ReactLenis className="h-full max-h-[80%] overflow-hidden">
               <div className="mb-8">
-                <p className="mb-2">Out and About</p>
+                <p className="mb-2 text-3xl">Out and About</p>
                 <ul className="text-monospace text-sm text-foreground/60">
-                  <li>iPhone 14</li>
+                  <li>iPhone 14 (128 gigs)</li>
+                  <li>MacBook Air M4 (256 gigs)</li>
                   <li>Daily Objects Keychain (x2)</li>
                   <li>Metal Card Holder</li>
                   <li>Apple Lightning EarPods</li>
@@ -35,20 +36,20 @@ export default function Edc() {
               </div>
 
               <div className="mb-8">
-                <p className="mb-2">Work Gear</p>
+                <p className="mb-2 text-3xl">Work Gear</p>
                 <ul className="text-monospace text-sm text-foreground/60">
-                  <li>Arctera Notebook</li>
+                  <li>MacBook Air M4</li>
+                  <li>Notebook</li>
                   <li>Lamy Safari Fountain Pen</li>
-                  <li>Arctera Backpack</li>
+                  <li>Generic Backpack</li>
                   <li>Logitech K580 Bluetooth Keyboard</li>
                   <li>Cheap Wireless Mouse</li>
-                  <li>Lenovo Thinkpad T14</li>
                   <li>Zebronics 28000mAh Powerbank</li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <p className="mb-2">Music Gear</p>
+                <p className="mb-2 text-3xl">Music Gear</p>
                 <ul className="text-monospace text-sm text-foreground/60">
                   <li>MSI GL65 Laptop (main personal computer)</li>
                   <li>Ableton Live DAW</li>
@@ -58,11 +59,12 @@ export default function Edc() {
                   <li>Blue Snowball USB Mic</li>
                   <li>Kreo Hive Mechanical Keyboard (Brown Switches)</li>
                   <li>Razer Viper Mouse</li>
+                  <li>Hercules Impulse 200 DJ Deck</li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <p className="mb-2">Skincare</p>
+                <p className="mb-2 text-3xl">Skincare</p>
                 <ul className="text-monospace text-sm text-foreground/60">
                   <li>Cetaphil Moisturizer</li>
                   <li>Dot&Key Watermelon Toner</li>
@@ -100,20 +102,20 @@ export default function Edc() {
 
         <StickerPeel
           imageSrc={"/edc/yellow journal.png"}
-          width={320}
+          width={140}
           rotate={0}
           peelBackHoverPct={3}
           peelBackActivePct={8}
-          initialPosition={{ x: -80, y: 130 }}
+          initialPosition={{ x: -240, y: 220 }}
         />
 
         <StickerPeel
           imageSrc={"/edc/black notebook.png"}
-          width={320}
+          width={140}
           rotate={0}
           peelBackHoverPct={5}
           peelBackActivePct={10}
-          initialPosition={{ x: -400, y: 130 }}
+          initialPosition={{ x: -400, y: 220 }}
         />
 
         <StickerPeel
@@ -122,7 +124,7 @@ export default function Edc() {
           rotate={0}
           peelBackHoverPct={10}
           peelBackActivePct={20}
-          initialPosition={{ x: 320, y: -220 }}
+          initialPosition={{ x: 220, y: -220 }}
         />
       </div>
     </div>

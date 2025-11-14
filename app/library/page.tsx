@@ -191,7 +191,10 @@ Bose’s stories are cleanly written, with a clear premise, setup, and often a t
       </div>
       <div className="h-full pl-8 w-[45vw] max-w-[45vw]">
         <ReactLenis
-          options={{ orientation: "horizontal" }}
+          options={{
+            orientation: "horizontal",
+            gestureOrientation: "horizontal",
+          }}
           className="w-full h-full pl-8 flex flex-col items-start justify-center overflow-x-auto no-scrollbar"
         >
           <div className="h-full flex flex-row gap-4 items-start justify-start w-full no-scrollbar min-h-full">
@@ -200,7 +203,7 @@ Bose’s stories are cleanly written, with a clear premise, setup, and often a t
                 className="h-full w-14 flex flex-col items-center justify-start bg-transparent border border-foreground rounded-sm cursor-pointer"
                 onClick={() => setSelected(-1)}
               >
-                <p className="[writing-mode:vertical-rl] m-4 text-xl text-foreground">
+                <p className="[writing-mode:vertical-rl] m-4 text-3xl text-foreground">
                   Home
                 </p>
               </div>
