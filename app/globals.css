@@ -197,3 +197,12 @@ html.lenis body {
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 18v-4h-5v-2h5v-4h2v4h5v2h-5v4h-2z"/></svg>'),
         auto;
 }
+
+.tilted-card-demo-text {
+    box-shadow: 0 5px 30px #06001059;
+    border-radius: 15px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1em;
+    margin: 2em 6em;
+}

@@ -20,6 +20,7 @@ import {
   SmileIcon,
 } from "lucide-react";
 import { TextReveal } from "@/components/ui/text-reveal";
+import TiltedCard from "@/components/ui/tilted-card";
 
 export default function Home() {
   const { triggerRef, tooltip } = useCursorTooltip<HTMLDivElement>({
@@ -44,7 +45,7 @@ export default function Home() {
   return (
     <main className="flex flex-row w-full items-center sm:px-6 lg:px-8 mt-16">
       <div className="flex flex-col items-start justify-center w-full">
-        <FadeIn delay={0.1}>
+        <FadeIn delay={0.4}>
           <div
             className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:cursor-none hover:border-solid"
             ref={triggerRef}
@@ -57,7 +58,7 @@ export default function Home() {
           {tooltip}
         </FadeIn>
 
-        <FadeIn delay={0.4} className="w-full mt-8">
+        <FadeIn delay={0.8} className="w-full mt-8">
           <div className="text-6xl text-foreground w-full">
             <TextReveal variant="blur" className="italic" staggerDelay={0.04}>
               I Make Stuff on the Internet.
@@ -74,7 +75,7 @@ export default function Home() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={1.4} className="w-full mt-32">
+        <FadeIn delay={1.6} className="w-full mt-32">
           <div className="text-lg text-muted-foreground">
             <p className="text-4xl text-foreground mb-4">Virtues</p>
             <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
@@ -104,11 +105,31 @@ export default function Home() {
             baseAngle={0}
             style={{ margin: "2rem" }}
           />*/}
-          <UnicornScene
+          {/*<UnicornScene
             className="unicorn-scene ml-16"
             projectId="8wvgb2QptnF0sKD8ChgI"
             width={512}
             height={640}
+          />*/}
+
+          <TiltedCard
+            imageSrc="/pari 2.jpeg"
+            altText="Pari Photo"
+            captionText="😁"
+            containerHeight="600px"
+            containerWidth="500px"
+            imageHeight="600px"
+            imageWidth="500px"
+            rotateAmplitude={8}
+            scaleOnHover={1.05}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={
+              <p className="tilted-card-demo-text text-sm text-monospace">
+                me @ pawna lake, pune. circa 2023
+              </p>
+            }
           />
         </FadeIn>
       </div>
