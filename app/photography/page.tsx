@@ -296,7 +296,7 @@ export default function Photography() {
           </FadeIn>
           <div>
             <FadeIn delay={0.2}>
-              <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify">
+              <p className="text-md text-muted-foreground text-monospace w-full mt-4 text-justify">
                 Since 2021, I've been collecting and shooting with vintage film
                 cameras. I'm drawn to the tactile process and the deliberate
                 nature of shooting film. Unlike digital, there's no instant
@@ -309,19 +309,23 @@ export default function Photography() {
                 Frame. Shoot. Go.
               </p>
               <Separator className="w-full" />
-              <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify">
+              <p className="text-md text-muted-foreground text-monospace w-full mt-4 text-justify">
                 Over on the right, you can see some of the cameras I like to
                 shoot with. These are 3D scans of my actual cameras that I did
                 with{" "}
                 <a
                   href="https://www.tripo3d.ai/"
                   target="_blank"
-                  className="decoration-neutral-600"
+                  className="decoration-neutral-600 dashed-link"
                 >
                   Tripo AI
                 </a>{" "}
                 and used{" "}
-                <a href="https://app.spline.design" target="_blank">
+                <a
+                  href="https://app.spline.design"
+                  target="_blank"
+                  className="dashed-link"
+                >
                   Spline
                 </a>{" "}
                 to host & animate them.
@@ -364,7 +368,7 @@ export default function Photography() {
             <h3 className="text-xl w-full text-center mb-4">
               {cameras[camera].name}
             </h3>
-            <p className="text-monospace text-foreground/70 text-sm text-justify ">
+            <p className="text-monospace text-muted-foreground text-sm text-justify ">
               {cameras[camera].info}
             </p>
           </FadeIn>

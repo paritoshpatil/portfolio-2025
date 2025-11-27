@@ -86,19 +86,19 @@ export default function LeftPane({
       <section className="mb-24" id="latest">
         <LatestProject id="latest" />
       </section>
-      <section className="mb-16" id="possession">
+      <section className="mb-24" id="possession">
         <Possession id="possession" />
       </section>
-      <section className="mb-16" id="nextblog">
+      <section className="mb-24" id="nextblog">
         <NextBlog id="nextblog" />
       </section>
-      <section className="mb-16" id="leadheart">
+      <section className="mb-24" id="leadheart">
         <LeadHeart id="leadheart" />
       </section>
-      <section className="mb-16" id="prsummary">
+      <section className="mb-24" id="prsummary">
         <PRSummary id="prsummary" />
       </section>
-      <section className="mb-16" id="artmix">
+      <section className="mb-24" id="artmix">
         <Artmix id="artmix" />
       </section>
     </div>

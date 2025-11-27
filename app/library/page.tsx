@@ -154,7 +154,7 @@ Bose’s stories are cleanly written, with a clear premise, setup, and often a t
     <main className="overflow-x-hidden-  h-remaining flex flex-row items-center h-full justify-centersm:px-6 lg:px-8">
       <div className="info-pane flex flex-col justify-start max-w-[40vw] w-[40vw] gap-8">
         <FadeIn delay={0} key={`review-${selected}`} duration={2}>
-          <h1 className="text-5xl">
+          <h1 className="text-5xl italic">
             {selected < 0 ? "Library" : books[selected].title}
           </h1>
         </FadeIn>
@@ -172,14 +172,14 @@ Bose’s stories are cleanly written, with a clear premise, setup, and often a t
 
                 <div className="flex flex-row w-full justify-between items-center">
                   <FadeIn key={`rating-${selected}`} delay={0.4} duration={1.6}>
-                    <p className="text-md mb-2">
+                    <p className="text-md mb-2 font-mono">
                       Rating: {books[selected].rating ?? 0}/5
                     </p>
                     <Stars rating={books[selected].rating ?? 0} />
                   </FadeIn>
 
                   <FadeIn key={`author-${selected}`} delay={0.4} duration={1.6}>
-                    <p className="text-md mb-2">{books[selected].author}</p>
+                    <p className="text-2xl mb-2 italic">{books[selected].author}</p>
                   </FadeIn>
                 </div>
               </div>

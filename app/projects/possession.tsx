@@ -15,7 +15,7 @@ export default function Possession(props: { id?: string }) {
       </FadeIn>
       <div>
         <FadeIn delay={0.2}>
-          <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify">
+          <p className="text-md text-muted-foreground text-monospace w-full mt-4 text-justify">
             Possession is a blazing-fast home inventory management application
             built with NextJS, ShadCN UI, and Supabase. The headline feature of
             Possession is the single input on the main page that allows you to
@@ -46,7 +46,7 @@ export default function Possession(props: { id?: string }) {
                 target="_blank"
                 className="no-underline"
               >
-                <span className="text-lg">View Possession on Github</span>
+                <span className="text-sm">View Possession on Github</span>
               </a>
             </Button>
             <Button
@@ -60,7 +60,7 @@ export default function Possession(props: { id?: string }) {
                 target="_blank"
                 className="no-underline"
               >
-                <span className="text-lg">View the Site</span>
+                <span className="text-sm">View the Site</span>
               </a>
             </Button>
           </div>

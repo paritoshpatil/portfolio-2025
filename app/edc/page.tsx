@@ -14,7 +14,7 @@ export default function Edc() {
             <h1 className="text-5xl">Everyday Carry</h1>
           </FadeIn>
           <FadeIn delay={0.2} className="h-full">
-            <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify mb-4">
+            <p className="text-md text-muted-foreground text-monospace w-full mt-4 text-justify mb-4">
               things I carry on and around me in 2025
             </p>
             <Separator className="w-full" />

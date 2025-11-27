@@ -74,9 +74,9 @@ export default function Navbar() {
     <FadeIn delay={2}>
       <BubbleMenu
         logo={
-          <Link href="/" className="text-xl text-background no-underline">
+          <a href="/" className="text-xl text-background no-underline">
             Pari
-          </Link>
+          </a>
         }
         items={items}
         menuAriaLabel="Toggle navigation"

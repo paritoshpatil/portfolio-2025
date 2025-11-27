@@ -44,13 +44,13 @@ export default function Home() {
 
   return (
     <main className="flex flex-row w-full items-center sm:px-6 lg:px-8 mt-16">
-      <div className="flex flex-col items-start justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full">
         <FadeIn delay={0.4}>
           <div
-            className="border border-dashed border-foreground/20 rounded-md p-4 text-center cursor-pointer hover:cursor-none hover:border-solid"
+            className="border border-dashed border-muted-foreground rounded-md p-4 text-center cursor-pointer hover:cursor-none hover:border-solid"
             ref={triggerRef}
           >
-            <h1 className="text-4xl text-foreground/70 text-left">
+            <h1 className="text-3xl text-muted-foreground text-left">
               Hello, my name is{" "}
               <span className="italic text-foreground">Pari.</span>
             </h1>
@@ -58,16 +58,21 @@ export default function Home() {
           {tooltip}
         </FadeIn>
 
-        <FadeIn delay={0.8} className="w-full mt-8">
-          <div className="text-6xl text-foreground w-full">
-            <TextReveal variant="blur" className="italic" staggerDelay={0.04}>
+        <FadeIn delay={0.8} className="w-full mt-16 text-center">
+          <div className="text-8xl text-foreground w-full">
+            <TextReveal
+              variant="blur"
+              className="italic"
+              delay={1}
+              staggerDelay={0.04}
+            >
               I Make Stuff on the Internet.
             </TextReveal>
             <br />
             <TextReveal
               variant="blur"
               className="italic"
-              delay={1}
+              delay={2}
               staggerDelay={0.04}
             >
               For the Internet.
@@ -75,43 +80,35 @@ export default function Home() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={1.6} className="w-full mt-32">
-          <div className="text-lg text-muted-foreground">
-            <p className="text-4xl text-foreground mb-4">Virtues</p>
-            <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
-              <CircleFadingPlus /> FIND CREATIVE SOLUTIONS
-            </p>
-            <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
-              <CircleSlash2Icon /> NO HALF MEASURES
-            </p>
-            <p className="flex flex-row items-center gap-4 mb-4 text-monospace">
-              <SmileIcon /> WHATEVER HAPPENS, HAPPENS
-            </p>
+        {/*  Virtues  */}
+        <FadeIn delay={3.2} className="w-full mt-48 text-center">
+          <div className="text-md text-muted-foreground text-center">
+            <p className="text-4xl text-foreground mb-8">Virtues</p>
+            <div className="w-full flex flex-row justify-between items-center gap-8">
+              <p className="min-w-60 flex flex-row items-center gap-4 mb-4 text-monospace">
+                {/*<CircleFadingPlus /> */}
+                find creative solutions
+              </p>
+              <div className="w-full border border-muted-foreground/50 mb-2"></div>
+              <p className="min-w-40 flex flex-row items-center gap-4 mb-4 text-monospace">
+                {/*<CircleSlash2Icon /> */}
+                no half measures
+              </p>
+              <div className="w-full border border-muted-foreground/50 mb-2"></div>
+
+              <p className="min-w-60 flex flex-row items-center gap-4 mb-4 text-monospace">
+                {/*<SmileIcon /> */}
+                whatever happens, happens
+              </p>
+            </div>
           </div>
         </FadeIn>
       </div>
-      <div className="flex flex-row items-center justify-center w-full">
+      {/*<div className="flex flex-row items-center justify-center w-full">
         <FadeIn
           delay={1.8}
           className="w-full h-full flex flex-row items-center justify-end rounded-lg"
         >
-          {/*<MagnetLines
-            rows={10}
-            columns={10}
-            containerSize="50vmin"
-            lineColor="white"
-            lineWidth="0.2vmin"
-            lineHeight="3vmin"
-            baseAngle={0}
-            style={{ margin: "2rem" }}
-          />*/}
-          {/*<UnicornScene
-            className="unicorn-scene ml-16"
-            projectId="8wvgb2QptnF0sKD8ChgI"
-            width={512}
-            height={640}
-          />*/}
-
           <TiltedCard
             imageSrc="/pari 2.jpeg"
             altText="Pari Photo"
@@ -132,7 +129,7 @@ export default function Home() {
             }
           />
         </FadeIn>
-      </div>
+      </div>*/}
     </main>
   );
 }

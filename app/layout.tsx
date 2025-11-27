@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Navbar from "./navbar";
 import { ReactLenis } from "@/components/ui/lenis";
+import { FadeIn } from "@/components/ui/fadein";
 
 function ThemeProvider({
   children,
@@ -52,9 +53,12 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main className="h-remaining flex flex-col items-center justify-center px-24">
+            <FadeIn
+              duration={2}
+              className="h-remaining flex flex-col items-center justify-center px-24 home-bg"
+            >
               {children}
-            </main>
+            </FadeIn>
           </ThemeProvider>
         </body>
       </ReactLenis>

@@ -1,9 +1,10 @@
+import { FadeIn } from "@/components/ui/fadein";
 import { Separator } from "@/components/ui/separator";
 
 export default function LibraryIntro() {
   return (
-    <>
-      <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify">
+    <FadeIn duration={1.6}>
+      <p className="text-md text-muted-foreground text-monospace w-full mt-4 text-justify">
         Like many kids, I loved reading in school but drifted away from it
         during high school and college. Around the same time, I developed
         persistent insomnia that lingered for years. Working in tech only made
@@ -16,9 +17,9 @@ export default function LibraryIntro() {
         These are my bite sized book reviews
       </p>
       <Separator className="w-full" />
-      <p className="text-md text-foreground/70 text-monospace w-full mt-4 text-justify">
+      <p className="text-md text-muted-foreground text-monospace w-full mt-4 text-justify">
         Select a book on the side to read my review of it.
       </p>
-    </>
+    </FadeIn>
   );
 }
